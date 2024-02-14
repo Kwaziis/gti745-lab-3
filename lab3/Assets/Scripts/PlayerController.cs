@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviour
  //number of cubes to get to win
  public int nbCubes;    
 
+ public AudioSource audioPlayer;
+
  // Start is called before the first frame update.
  void Start()
     {
@@ -80,6 +82,9 @@ public class PlayerController : MonoBehaviour
 
  // Update the count display.
             SetCountText();
+// Play the pickup sound.
+            PlayPickupSound(); 
+
         }
     }
 
@@ -96,4 +101,13 @@ public class PlayerController : MonoBehaviour
             winTextObject.SetActive(true);
         }
     }
+
+void PlayPickupSound()
+   {
+       if (audioPlayer != null) // Check if an audio source is assigned.
+       {
+       audioPlayer.Play(); // Play the pickup sound.
+       }
+   }      
+       
 }
