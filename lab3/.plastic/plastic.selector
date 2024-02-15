@@ -1,0 +1,4 @@
+repository "lab3@tmac45@cloud"
+  path "/"
+    br "/main"
+    co "/main"
